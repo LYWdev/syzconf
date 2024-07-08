@@ -1,0 +1,14 @@
+{
+        "target": "linux/amd64",
+        "http": "127.0.0.1:56741",
+        "rpc": "127.0.0.1:0",     //시즈퍼저 연결할 포트 설정가능
+        "workdir": "/home/test2004/git_work/syzkaller/workdir", //시즈컬러
+        "syzkaller": "/home/test2004/git_work/syzkaller",       //바이너리
+        "enable_syscalls": ["read"],                            // 타겟 시스템 콜 딱하나 가능.
+        "sandbox": "none",
+        "type": "none",
+        "cover": false         //KCOV확인안하도록 설정
+}
+//syzfuzzer바이너리파일있음.(linuxamd64안에 있음.)
+//시지매니저 실행하면 시즈퍼저 실행해달라고함.
+//다른 커맨드 창에서 시즈 퍼저 실행.

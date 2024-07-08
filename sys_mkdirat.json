@@ -1,0 +1,11 @@
+{
+        "target": "linux/amd64",
+        "http": "127.0.0.1:56741",
+        "rpc": "127.0.0.1:0",
+        "workdir": "/home/test2004/git_work/syzkaller/workdir",
+        "syzkaller": "/home/test2004/git_work/syzkaller",
+        "enable_syscalls": ["mkdirat"],
+        "sandbox": "none",
+        "type": "none",
+        "cover": false
+    }
