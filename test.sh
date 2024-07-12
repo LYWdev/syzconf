@@ -33,8 +33,8 @@ for syscall in "${syscalls[@]}"; do
         \"target\": \"linux/amd64\",
         \"http\": \"127.0.0.1:56741\",
         \"rpc\": \"127.0.0.1:0\",
-        \"workdir\": \"/home/test2004/git_work/syzkaller/workdir\",
-        \"syzkaller\": \"/home/test2004/git_work/syzkaller\",
+        \"workdir\": \"/home/syz/syzconf/syzkaller/workdir\",
+        \"syzkaller\": \"/home/syz/syzconf/syzkaller\",
         \"enable_syscalls\": [\"$syscall\"],
         \"sandbox\": \"none\",
         \"type\": \"none\",
@@ -50,7 +50,7 @@ for syscall in "${syscalls[@]}"; do
     fi
 
     # 설정 파일 생성 및 내용 쓰기
-    echo "$config_json" > "$config_file"
+    echo "$config_json" > "config/$config_file"
 done
 
 # 생성된 설정 파일 목록 출력
